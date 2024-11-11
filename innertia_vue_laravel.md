@@ -23,8 +23,8 @@ ________________________________________instalação server side________________
 _________________________________________instalação client side______________________________
 1 -  npm install @inertiajs/vue3 
 
-1.1  - npm install @vitejs/plugin-vue (npm install laravel-vite-plugin@latest) verifique as verções para haver conflito
-
+1.1  - npm install @vitejs/plugin-vue //verifique as verções para haver conflito
+1.2 - npm install laravel-vite-plugin@latest
 
   "devDependencies": {
         "axios": "^1.6.4",
@@ -61,6 +61,6 @@ createInertiaApp({
 5 - limpe o cache:
 npm cache clean --force
 
-6 -  npm run dev
+6 - npm run dev
 -------
 Obs:para atualizar o package.json execute:npm install 

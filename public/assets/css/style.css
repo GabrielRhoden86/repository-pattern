@@ -1,28 +1,41 @@
-.header-content{
-    background-color: antiquewhite;
-    padding:10px;
-    text-align: center;
-}
 * {
     margin: 0;
     padding: 0;
-  }
+}
 
-  .home-content {
+.header-content {
+    background-color: antiquewhite;
+    padding: 10px;
     text-align: center;
-  }
-  /* Inicio: manter o footer ao final da pagina*/
-  main {
+}
+
+.header-butons{
+    display: flex;
+    justify-content:start;
+    margin-top:1%;
+}
+
+.header-butons button{
+  margin-left: 5px;
+}
+
+.home-content {
+    text-align: center;
+}
+/* Manter o footer ao final da pagina (Início)*/
+main {
     flex: 1;
-  }
-  .wrapper {
+}
+
+.wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-  footer{
+}
+
+footer {
     background-color: rgb(140, 192, 238);
     padding: 1%;
     text-align: center;
 }
-  /* Fim: manter o footer ao final da pagina*/
+/* Manter o footer ao final da pagina(fim)*/

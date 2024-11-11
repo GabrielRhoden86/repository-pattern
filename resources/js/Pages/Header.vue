@@ -21,16 +21,36 @@
       </li>
     </ul>
   </div>
+  <div class="header-butons">
+    <Botao texto="Clique Aqui" @click="botao1Click" />
+    <Botao  @click="botao2Click" />
+    <Botao texto="Confirmar" @click="botao3Click" />
+  </div>
  </header>
 </template>
 
 <script>
+import Botao from '@/Components/Botao.vue';
 export default {
   name: "Header",
+  components: {
+    Botao
+  },
   data() {
     return {
       msg: "Item Header!",
     };
+  },
+  methods: {
+    botao1Click() {
+      alert('Botão 1 clicado!');
+    },
+    botao2Click() {
+      alert('Botão 2 clicado!');
+    },
+    botao3Click() {
+      alert('Botão 3 clicado!');
+    },
   },
 };
 </script>

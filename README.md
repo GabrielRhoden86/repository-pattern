@@ -26,8 +26,9 @@ app
 │
 ├── Repositories
 │   ├── Interfaces
-│   │   └── UserRepositoryInterface.php
-│   │ 
+│   │     ├── BaseRepositoryInterface.php
+|   |     └── UserRepositoryInterface.php
+│   │   
 │   ├── Doctrine
 │   │   ├── BaseDoctrineRepository.php
 │   │   └── UserDoctrineRepository.php

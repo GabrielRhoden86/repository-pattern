@@ -9,6 +9,6 @@ class HomeController extends Controller
     }
 
     public function index(){
-        return $this->user->all();
+        return $this->user->userAdmin();
     }
 }

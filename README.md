@@ -12,7 +12,6 @@ isso irá criar um provider para poder utilizar tanto o eloquent quanto o doctri
   'providers' => ServiceProvider::defaultProviders()->merge([
         App\Providers\UserServiceProvider::class,
     ])->toArray(),
-
 ___________________________________________________________________
 
 app

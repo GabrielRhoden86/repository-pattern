@@ -4,7 +4,7 @@
 }
 
 .header-content {
-    background-color: antiquewhite;
+    background-color: rgb(237, 247, 223);
     padding: 10px;
     text-align: center;
 }
@@ -33,9 +33,4 @@ main {
     min-height: 100vh;
 }
 
-footer {
-    background-color: rgb(140, 192, 238);
-    padding: 1%;
-    text-align: center;
-}
 /* Manter o footer ao final da pagina(fim)*/

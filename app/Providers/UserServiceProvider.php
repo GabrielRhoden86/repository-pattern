@@ -12,12 +12,12 @@ class UserServiceProvider extends ServiceProvider
     public function register(): void
     {
         // Escolha uma implementação:
-         $this->app->bind(UserRepositoryInterface::class, UserDoctrineRepository::class);
-        //$this->app->bind(UserRepositoryInterface::class, UserRepository::class);
+        // $this->app->bind(UserRepositoryInterface::class, UserDoctrineRepository::class);
+        $this->app->bind(UserRepositoryInterface::class, UserRepository::class);
     }
 
     public function boot(): void
     {
-        //
+
     }
 }

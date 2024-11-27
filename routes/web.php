@@ -1,10 +1,7 @@
 <?php
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
-Route::get('/HomeTester', [HomeController::class, 'index'])->name('/HomeTester');
-
-Route::get('/', function(){
-    return Inertia::render('Home',['title'=>'Olá Seja Bem vindo!']);
-});
+Route::get('/', action: [HomeController::class, 'index'])->name('/');
+Route::get('/login', action: [LoginController::class, 'index'])->name('/Login');

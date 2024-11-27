@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     handleClick() {
-      this.$emit("click"); // Certifique-se de que isso só está sendo chamado uma vez
+      this.$emit("click");
     },
   },
 };

@@ -1,7 +1,6 @@
 ________________________________________instalação server side_________________________
 1 - composer require inertiajs/inertia-laravel
-
-2 - implemente a view:
+2 - implemente a view em resources\views\app.blade.php:
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,14 +15,12 @@ ________________________________________instalação server side________________
 </html>
 
  3 - php artisan inertia:middleware
-
  4 -  em app\Http\Kernel.php insira na Middleware 'web' => 
      \App\Http\Middleware\HandleInertiaRequests::class
 
 _________________________________________instalação client side______________________________
 1 -  npm install @inertiajs/vue3 
-
-1.1  - npm install @vitejs/plugin-vue //verifique as verções para haver conflito
+1.1 - npm install @vitejs/plugin-vue //verifique as verções para haver conflito
 1.2 - npm install laravel-vite-plugin@latest
 
   "devDependencies": {
@@ -60,6 +57,12 @@ createInertiaApp({
 
 5 - limpe o cache:
 npm cache clean --force
+
+6  - Quando o InertiaJS é usado com Vue, ao clicar em um <Link>, o Inertia faz uma requisição para o servidor para buscar os dados no formato JSON (não HTML), e então atualiza a página dinamicamente com esses dados.
+configure em app.js:
+import { createInertiaApp, Link } from '@inertiajs/vue3'  // Importação correta do Link em app.js
+.component('Link', Link) // Registra o Link globalmente
+ex:<Link href="\login">Log in</Link >
 
 6 - npm run dev
 -------

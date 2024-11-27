@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Repositories\Eloquent;
-
 use App\Repositories\Interfaces\UserRepositoryInterface;
 use App\Models\User;
 
@@ -17,6 +16,6 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
     {
         // Método de exemplo para buscar administradores
         // return $this->model->where('role', 'admin')->get();
-        return dd("Admin!");
+        return $this->model->where('id', 17)->select('name')->first();
     }
 }

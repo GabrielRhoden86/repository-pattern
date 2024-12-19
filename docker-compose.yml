@@ -27,13 +27,13 @@ services:
         image: 'mysql/mysql-server:8.0'
         ports:
             - '${FORWARD_DB_PORT:-3308}:3306'  # Mapeado para a porta 3308 para o server ou pc local a 3306 é do container
-        environment:
+        environment:                                # variaveis de ambiente
             MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
-            MYSQL_ROOT_HOST: '%'
+            MYSQL_ROOT_HOST: '%'   # Permite conexões do usuário root de qualquer host (%).
             MYSQL_DATABASE: '${DB_DATABASE}'
             MYSQL_USER: '${DB_USERNAME}'
             MYSQL_PASSWORD: '${DB_PASSWORD}'
-            MYSQL_ALLOW_EMPTY_PASSWORD: 1
+            MYSQL_ALLOW_EMPTY_PASSWORD: 1 # Permite que o MySQL seja iniciado mesmo se a senha estiver vazia (não recomendado para produção).
         volumes:
             - 'sail-mysql:/var/lib/mysql'
             - './vendor/laravel/sail/database/mysql/create-testing-database.sh:/docker-entrypoint-initdb.d/10-create-testing-database.sh'

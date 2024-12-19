@@ -16,6 +16,6 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
     {
         // Método de exemplo para buscar administradores
         // return $this->model->where('role', 'admin')->get();
-        return $this->model->where('id', 17)->select('name')->first();
+        return $this->model->where('id', 7)->select('name')->first();
     }
 }
